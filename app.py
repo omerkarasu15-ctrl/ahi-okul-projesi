@@ -10,6 +10,7 @@ st.title("🕌 Ahi-AI: Değerler Eğitimi ve Mülakat")
 st.info("Bu sistem, öğrenci adaylarını sadece notlarıyla değil; Ahilik değerleri, dürüstlük, sabır ve kriz yönetimi becerileriyle değerlendirir.")
 
 # --- YAN MENÜ (GÜVENLİK) ---
+# --- YAN MENÜ (GÜVENLİK) ---
 with st.sidebar:
     st.header("🔑 Giriş Paneli")
     st.write("Sistemi kullanmak için anahtarınızı girin.")
