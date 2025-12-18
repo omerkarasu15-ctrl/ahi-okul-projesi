@@ -9,14 +9,20 @@ st.image("https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&auto=f
 st.title("🕌 Ahi-AI: Değerler Eğitimi ve Mülakat")
 st.info("Bu sistem, öğrenci adaylarını sadece notlarıyla değil; Ahilik değerleri, dürüstlük, sabır ve kriz yönetimi becerileriyle değerlendirir.")
 
-# --- YAN MENÜ (GÜVENLİK) ---
-# --- YAN MENÜ (GÜVENLİK) ---
+# --- YAN MENÜ (BİLGİ) ---
 with st.sidebar:
-    st.header("🔑 Giriş Paneli")
-    st.write("Sistemi kullanmak için anahtarınızı girin.")
-    api_key = st.text_input("Google API Anahtarı:", type="password", help="AI Studio'dan aldığınız şifre.")
-    st.divider()
-    st.caption("Geliştirici: Ömer Hoca & Gemini")
+    st.image("https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&auto=format&fit=crop&q=60")
+    st.header("Hakkında")
+    st.info("Bu uygulama Ahi Kültürü ile Yapay Zekayı birleştirir.")
+    st.caption("Geliştirici: Ömer Hoca")
+
+# --- ŞİFREYİ KASADAN AL ---
+# Artık şifreyi kullanıcıdan değil, gizli kasadan çekiyoruz.
+if "GOOGLE_API_KEY" in st.secrets:
+    api_key = st.secrets["GOOGLE_API_KEY"]
+else:
+    st.error("API Anahtarı bulunamadı! Lütfen Secrets ayarlarını kontrol edin.")
+    st.stop()
 
 # --- PROGRAM ---
 if api_key:
